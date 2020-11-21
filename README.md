@@ -5,9 +5,9 @@ Original author of much of this content:
 https://bartonbytes.com/posts/how-to-configure-coredns-for-dns-over-tls/
 
 Pre-Reqs:
-2 seperate fully configured docker hosts with docker-compose -- This is required as of now since I have not found a good way to allow the pihole container and coredns container to play well together on the same host since they both use port 53.
-Pihole fully configured and running on one of the docker hosts.
-Public DNS entry that resolves to the public ip address of the docker host that will run coredns for DNS over TLS.
+- 2 seperate fully configured docker hosts with docker-compose -- This is required as of now since I have not found a good way to allow the pihole container and coredns container to play well together on the same host since they both use port 53.
+- Pihole fully configured and running on one of the docker hosts.
+- Public DNS entry that resolves to the public ip address of the docker host that will run coredns for DNS over TLS.
 
 Steps to setup:
 1. Clone this repository onto the docker host NOT running pihole. My examples assume you have cloned it into your users home directory.
