@@ -2,7 +2,9 @@
 
 DNSHOSTNAME="host.example.com"
 
-docker run -it --rm --name certbot \
+cd /home/containeradmin/public-coredns-tls
+
+docker run -i --rm --name certbot \
 	-v "/etc/letsencrypt:/etc/letsencrypt" \
 	-v "/var/lib/letsencrypt:/var/lib/letsencrypt" \
 	-p "80:80" \
