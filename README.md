@@ -6,7 +6,7 @@ https://bartonbytes.com/posts/how-to-configure-coredns-for-dns-over-tls/
 
 Pre-Reqs:
 - 2 seperate fully configured docker hosts with docker-compose -- This is required as of now since I have not found a good way to allow the pihole container and coredns container to play well together on the same host since they both use port 53.
-- You will most likely need to stop & disable your Docker Hosts DNS service. Steps for CentOS 8:
+- You will most likely need to stop & disable your the DNS service on both Docker hosts. Steps for CentOS 8:
    ```
    sudo systemctl stop systemd-resolved.service
    sudo systemctl disable systemd-resolved.service
