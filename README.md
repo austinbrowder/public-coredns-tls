@@ -26,5 +26,5 @@ Steps to setup:
    - Test full DNS functionality over TLS:
    > kdig -d @\<corednsdockerhostpublicIP\> +tls-ca +tls-host=\<corednsdockerhostpublicDNSHost\> amazon.com
 5. Now, if you're familiar with letsencrypt certificates, you will know that they expire every 90 days. Let's address this by setting up some automation to renew the cert. To do this we will simply setup a cronjob as seen below that will run the certbot container to renew the certificate previously configred by the configure.sh script.
-   > 0 2 */10 * * /home/\<yourusername\>/public-coredns-tls/renew.sh &> ~/letsencrypt_renew.log
-   - Note: This job will run every 10 days and by default if the certbot detects no certs are due for renewall it will leave the cert as is.
+   > 0 2 */15 * * /home/\<yourusername\>/public-coredns-tls/renew.sh &> ~/letsencrypt_renew.log
+   - Note: This job will run every 15 days and by default if the certbot detects no certs are due for renewall it will leave the cert as is.
